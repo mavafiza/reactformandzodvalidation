@@ -9,9 +9,8 @@ export default function Navbar() {
     <Nav>
       <Ul>
         <LiLeft>
-        {/* <MyImg src={logo} alt="Logo soundwave" /> */}
           <MyNavLink to={'/'} >
-            Soundwave
+            Let`s drink a vermut!!!
           </MyNavLink>
         </LiLeft>
         <LiRight>

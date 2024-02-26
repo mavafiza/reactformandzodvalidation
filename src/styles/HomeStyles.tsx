@@ -5,6 +5,8 @@ export const MyH2 = styled.h2`
     font-size: 50px;
     font-size: 3em;
     font-weight: 400;
+    display: flex;
+    padding-top: 120px;
 `;
 
 export const MyP = styled.p`

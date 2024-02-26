@@ -8,7 +8,7 @@ export const MyH2 = styled.h2`
 
 
 export const FlexRow = styled.div`
-    padding-top: 15%;
+    padding-top: 5%;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -21,5 +21,5 @@ export const FlexRow = styled.div`
 
 
 export const MySpan = styled.span`
-    color: #BC3A80;
+    color: #a9dc28;
 `;

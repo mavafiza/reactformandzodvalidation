@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import { Button, Validator } from ".";
 import { FormInput, FormInputRow, FormLabel, FormMessage, FormWrapper } from "../styles/FormStyles";
 
+
+
+
+
 const Form = () => {
 
   const [name, setName] = useState<string>('');     
@@ -44,6 +48,7 @@ const Form = () => {
     animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
   };
 
+  // SE ESQUEMATIZA EL FORMULARIO
   const formJoin = [                             
     { label: 'Name', value: name, onChange: (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value), type: 'text' },
     { label: 'Age', value: age === null ? '' : age.toString(), onChange: handleAgeChange, type: 'number' },
@@ -66,7 +71,7 @@ const Form = () => {
               />
           </FormInputRow>
         ))}
-                                                  {/* 6-   UTILIZAMOS UN COMPONENTE BUTTON PARA ENVIAR LOS DATOS */}
+{/* 6-   UTILIZAMOS UN COMPONENTE BUTTON PARA ENVIAR LOS DATOS */}
         <Button width="100%" height='30px' />   
       </FormWrapper>
 

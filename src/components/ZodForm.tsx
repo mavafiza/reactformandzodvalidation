@@ -5,7 +5,8 @@ import { object, string, number } from 'zod';
 import { Button} from ".";
 import { FormInput, FormInputRow, FormLabel, FormMessage, FormWrapper } from "../styles/FormStyles";
 
-const schema = object({
+// SE ESQUEMATIZA EL FORMULARIO
+const schema = object({ 
     name: string().nonempty({ message: 'El nombre es requerido' }),
     age: number().nonnegative({ message: 'La edad debe ser un número positivo' }),
     email: string().email({ message: 'El email no es válido' }),
@@ -68,7 +69,7 @@ const Form = () => {
                     defaultValue=""
                     render={({ field }) => <FormInput {...field} />}
                 />
-            {errors.password && <FormMessage>{errors.password.message}</FormMessage>}
+                {errors.password && <FormMessage>{errors.password.message}</FormMessage>}
             </FormInputRow>
 
             <Button width="100%" height='30px' />

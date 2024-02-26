@@ -16,9 +16,9 @@ export default function Home() {
                     <FlexRow>
                         <MyImgHome src={landingGirl} alt="" />
                         <FlexColHome>
-                            <MyH2>Feel the Music</MyH2>
-                            <MyP>Stream over 20 thousand songs with one click</MyP>
-                            <Button width= "25%" height = "40px" />
+                            <MyH2>May I have a vermut ?</MyH2>
+                            <MyP>How old are you ?</MyP>
+                            {/* <Button width= "25%" height = "40px" /> */}
                         </FlexColHome>
                     </FlexRow>
                 </div>
