@@ -36,7 +36,7 @@ const schema = object({
 const { handleSubmit, control, formState: { errors }, reset } = useForm({
         resolver: zodResolver(schema)
     });
-
+ 
 5. Crea tu formulario usando Controller para conectar los campos del formulario con react-hook-form.
 
 return (
