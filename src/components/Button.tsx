@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 export default function Button({ width = '112px', height = '48px' }) {
-    let mainColor = "#1762A7",
-        hoverColor = "#2180d8";
+    let mainColor = "#17a751",
+        hoverColor = "#0e7843";
 
     const JoinButton = styled.button`
         background-color: ${mainColor};

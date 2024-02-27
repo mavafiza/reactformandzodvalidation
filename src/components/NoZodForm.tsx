@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
-import { Button, Validator } from ".";
+
+
+
+import { Button} from ".";
 import { FormInput, FormInputRow, FormLabel, FormMessage, FormWrapper } from "../styles/FormStyles";
+
+import { Validator } from ".";
+
 
 
 
@@ -16,7 +22,6 @@ const Form = () => {
   const [success, setSuccess] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  
-
     e.preventDefault();                                            
     const resultError = Validator({ name, age, email, password });     
 
@@ -24,13 +29,17 @@ const Form = () => {
       setError(resultError);
       return;
     }
+
+
+
+
     setName('');
     setAge(null);
     setEmail('');
     setPassword('');
     setError(null);
-    setSuccess('Application was submitted!');
 
+    setSuccess('Application was submitted!');
   };
 
   const handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,13 +52,19 @@ const Form = () => {
   };
 
   const messageAnimation = {                            
-
     hidden: { y: 30, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
   };
 
+  
+  
+  
+  
+  
+  
+  
   // SE ESQUEMATIZA EL FORMULARIO
-  const formJoin = [                             
+  const formFields = [                             
     { label: 'Name', value: name, onChange: (e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value), type: 'text' },
     { label: 'Age', value: age === null ? '' : age.toString(), onChange: handleAgeChange, type: 'number' },
     { label: 'Email', value: email, onChange: (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value), type: 'email' },
@@ -58,21 +73,40 @@ const Form = () => {
 
   return (
     <>
-
       <FormWrapper onSubmit={handleSubmit}>
-        {formJoin.map((element, index) => (
+        {formFields.map((element, index) => (
           <FormInputRow key={index}>
             <FormLabel>{element.label}</FormLabel>
+            
+            
+
+
+            
+            
+            
+            
+            
+            
+            
             <FormInput
               type={element.type}
               placeholder={`Enter your ${element.label.toLocaleLowerCase()}`}
               value={element.value}
               onChange={element.onChange}
               />
+
+
+          
           </FormInputRow>
         ))}
-{/* 6-   UTILIZAMOS UN COMPONENTE BUTTON PARA ENVIAR LOS DATOS */}
+
         <Button width="100%" height='30px' />   
+      
+      
+      
+      
+      
+      
       </FormWrapper>
 
       {error && (
@@ -94,9 +128,8 @@ const Form = () => {
           {success}
         </FormMessage>
       )}
-
     </>
   )
 }
 
-export default Form       //  7-  EXPORTACIÓN DEL COMPONENTE
+export default Form       

@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const MyH2 = styled.h2`
     color: white;
-    font-size: 50px;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 400;
     display: flex;
     padding-top: 120px;

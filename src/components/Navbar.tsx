@@ -10,7 +10,7 @@ export default function Navbar() {
       <Ul>
         <LiLeft>
           <MyNavLink to={'/'} >
-            Let`s drink a vermut!!!
+            Let`s order a vermut!!!
           </MyNavLink>
         </LiLeft>
         <LiRight>
