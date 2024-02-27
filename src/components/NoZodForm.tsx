@@ -111,7 +111,8 @@ const Form = () => {
 
       {error && (
         <FormMessage
-        variants={messageAnimation}         //  4-   UTILIZAMOS UNA ANIMACIÓN DE css PARA LOS MENSAJES DE error y éxito
+        //  4-   UTILIZAMOS UNA ANIMACIÓN DE css PARA LOS MENSAJES DE error y éxito
+        variants={messageAnimation}         
         initial="hidden"
         animate="animate"
         error

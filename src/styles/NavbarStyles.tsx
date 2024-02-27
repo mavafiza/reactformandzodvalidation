@@ -32,11 +32,6 @@ display: flex;
     gap: 25%;
 `;
 
-/* export const MyImg = styled.img`
-    width: 50px;
-    height: auto;
-`; */
-
 export const MyNavLink = styled(NavLink)`
     text-decoration: none;
     color: white;
@@ -44,9 +39,12 @@ export const MyNavLink = styled(NavLink)`
 
     &:hover {
         color: #202027;
+        text-decoration: underline;
+        color: white;
     }
 
     &.active {
-        font-weight: bold;
+        font-weight: 400;
+        text-decoration: underline;
     }
 `;

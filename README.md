@@ -39,32 +39,33 @@ const { handleSubmit, control, formState: { errors }, reset } = useForm({
  
 5. Crea tu formulario usando Controller para conectar los campos del formulario con react-hook-form.
 
-return (
-  <form onSubmit={handleSubmit(onSubmit)}>
-            {formFields.map(({ name, label, type }, index) => (
-                <FormInputRow key={index}>
-                    <Label>{label}</Label>
+ return (
+    
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {formFields.map(({ name, label, type }, index) => (
+        <div key={index}>
+          <label>{label}</label>
 
-                    <Controller
-                        name={name}
-                        control={control}
-                        defaultValue={type === 'number' ? 0 : ''}
-                        render={({ field }) => (
+          <Controller
+            name={name}
+            control={control}
+            defaultValue={type === 'number' ? 0 : ''}
+            render={({ field }) => (
 
-                            <Input
-                                {...field}
-                                type={type}
-                                placeholder={`Enter your ${name.toLocaleLowerCase()}`}
-                                value={field.value}
-                                onChange={(e) => field.onChange(type === 'number' ? parseInt(e.target.value, 10) : e.target.value)}
-                            />
-                        )}
-                    />
-                </FormInputRow>
-            ))}
+              <input
+                {...field}
+                type={type}
+                placeholder={`Enter your ${name.toLocaleLowerCase()}`}
+                value={field.value}
+                onChange={(e) => field.onChange(type === 'number' ? parseInt(e.target.value, 10) : e.target.value)}
+              />
+            )}
+          />
+        </div>
+      ))}
 
-            <Button width="100%" height='30px' />
+      <Button width="100%" height='30px' />
 
-  </form>
-);
+    </form>
+  );
 

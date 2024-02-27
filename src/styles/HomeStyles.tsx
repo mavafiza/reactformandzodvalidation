@@ -8,14 +8,6 @@ export const MyH2 = styled.h2`
     padding-top: 120px;
 `;
 
-export const MyP = styled.p`
-    color: white;
-    font-size: 1.1em;
-    font-weight: 200;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding-bottom: 10px;
-`;
 
 export const MyImgHome = styled.img`
     margin-top: 12%;
